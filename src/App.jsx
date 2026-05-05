@@ -44,7 +44,6 @@ export default function App() {
       <Header count={jokes.length} />
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        {/* ── Loading ── */}
         {loading && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {Array(8)
@@ -55,7 +54,6 @@ export default function App() {
           </div>
         )}
 
-        {/* ── Error ── */}
         {error && (
           <div className="flex flex-col items-center justify-center py-28 gap-5 text-center">
             <div className="text-7xl">😅</div>
@@ -83,10 +81,8 @@ export default function App() {
           </div>
         )}
 
-        {/* ── Jokes grid ── */}
         {!loading && !error && jokes.length > 0 && (
           <>
-            {/* Heading */}
             <div className="flex items-center justify-between mb-8">
               <div>
                 <h2
@@ -110,7 +106,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* 2-col grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {jokes.map((joke, i) => (
                 <JokeCard key={joke.id} joke={joke} index={i} />

@@ -62,7 +62,6 @@ export default function JokeCard({ joke, index = 0 }) {
         e.currentTarget.style.borderColor = "#bae0fd";
       }}
     >
-      {/* Left colour stripe */}
       <div
         className="w-1.5 flex-shrink-0"
         style={{ backgroundColor: stripe }}
@@ -70,7 +69,6 @@ export default function JokeCard({ joke, index = 0 }) {
 
       {/* Card body */}
       <div className="flex-1 p-5">
-        {/* Top row: id + categories */}
         <div className="flex items-center justify-between gap-2 mb-3">
           <span
             className="text-xs font-black px-2.5 py-1 rounded-lg"
@@ -101,7 +99,6 @@ export default function JokeCard({ joke, index = 0 }) {
           </div>
         </div>
 
-        {/* Joke content */}
         <p
           className="text-sm leading-relaxed font-medium mb-4"
           style={{ color: "#172033", lineHeight: "1.75" }}
@@ -114,7 +111,6 @@ export default function JokeCard({ joke, index = 0 }) {
           className="flex items-center justify-between pt-3 border-t"
           style={{ borderColor: "#dbeeff" }}
         >
-          {/* Copy button */}
           <button
             onClick={handleCopy}
             className="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg

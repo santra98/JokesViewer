@@ -10,7 +10,6 @@ export default function Header({ count }) {
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <div className="flex items-center gap-2.5">
             <div
               className="w-9 h-9 rounded-xl flex items-center justify-center text-xl font-black border-2"
@@ -30,7 +29,6 @@ export default function Header({ count }) {
             </span>
           </div>
 
-          {/* Tagline */}
           <p
             className="hidden md:block text-sm font-medium"
             style={{ color: "#5a7a9a" }}
@@ -38,7 +36,6 @@ export default function Header({ count }) {
             A joke a day keeps the frowns away 😄
           </p>
 
-          {/* Count badge */}
           {count > 0 && (
             <span
               className="text-xs font-bold px-3 py-1.5 rounded-full border-2"
