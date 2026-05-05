@@ -1,16 +1,33 @@
-# React + Vite
+# JokesViewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+JokesViewer is a small React app that pulls in a batch of science-themed jokes and lays them out as a cheerful little gallery.
 
-Currently, two official plugins are available:
+Open the page, wait a moment for the cards to load, and scroll through the jokes. Each card shows the joke content, its categories, and a quick copy button if you want to steal one for a group chat.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What it does
 
-## React Compiler
+- Fetches 10 random science jokes from the FreeAPI public jokes endpoint
+- Shows loading skeletons while the request is in flight
+- Handles failed requests with a retry state
+- Displays jokes in a clean card layout with category tags
+- Lets you copy individual jokes to the clipboard
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built with
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project structure
+
+`src/App.jsx` handles fetching, loading, and error states.
+
+`src/components/Header.jsx` renders the sticky top bar.
+
+`src/components/JokeCard.jsx` renders each joke card and the copy interaction.
+
+`src/components/SkeletonCard.jsx` handles the loading placeholders.
+
+## Notes
+
+This project uses a public jokes API, so the exact content can change between refreshes.
